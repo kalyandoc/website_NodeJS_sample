@@ -1,4 +1,5 @@
 var express = require('express');
+var http=require('http');
 var path = require('path');
 var favicon = require('static-favicon');
 var logger = require('morgan');
@@ -55,5 +56,6 @@ app.use(function(err, req, res, next) {
     });
 });
 
+http.createServer(app).listen(3000);
 
 module.exports = app;
